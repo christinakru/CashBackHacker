@@ -1,7 +1,7 @@
 import org.example.CashbackHackService;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.Assert.assertEquals;
 
 public class CashBackHackServiceTest {
     @Test
@@ -11,7 +11,7 @@ public class CashBackHackServiceTest {
         int expected = 1000;
         int actual = service.remain(0);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 
     @Test
@@ -21,7 +21,7 @@ public class CashBackHackServiceTest {
         int expected = 500;
         int actual = service.remain(500);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class CashBackHackServiceTest {
         int expected = 500;
         int actual = service.remain(1500);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 
     @Test
@@ -41,6 +41,6 @@ public class CashBackHackServiceTest {
         int expected = 0;
         int actual = service.remain(1000);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 }
